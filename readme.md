@@ -57,4 +57,4 @@ Cenário: Tentativa de cadastro com campos obrigatórios em branco
 
 ### Testes: 
 
-[Testes BDD](https://github.com/jleandromorais/Back-S.O.S/tree/leandro-branch)
+[Testes BDD](https://github.com/Enzo-Antuna/Projeto-BDD/blob/main/bdd.java)
