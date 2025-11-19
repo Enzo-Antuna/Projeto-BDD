@@ -1,14 +1,22 @@
-A história de usuário que escolhi foi:
+# **Funcionalidade**: Cadastro de Usuário no Sistema S.O.S Escola
 
-Como um usuário do sistema S.O.S,
-Eu quero poder me cadastrar na plataforma
-Para que eu possa solicitar ajuda ou oferecer assistência a outros usuários.
-A seguir, apresento os cenários de uso em Gherkin, a implementação de um dos testes e o link para o repositório com o projeto BDD.
+## 1. História de Usuário
 
-Cenários de Uso (Gherkin):
+> **Como** um usuário do sistema S.O.S Escola,
+>
+> **Eu quero** poder me cadastrar na plataforma
+>
+> **Para** que eu possa solicitar ajuda ou oferecer assistência a outros usuários.
 
-# language: pt
+---
 
+## 2. Critérios de Aceite (Cenários Gherkin)
+
+A seguir, estão os cenários de teste que descrevem o comportamento esperado da funcionalidade de cadastro.
+
+### Cenário 1: Cadastro com Sucesso
+
+```gherkin
 Funcionalidade: Cadastro de Usuário
   Como um novo usuário
   Eu quero me cadastrar no sistema S.O.S
@@ -22,7 +30,11 @@ Cenário: Cadastro com sucesso
   E clico no botão "Cadastrar"
   Então eu devo ser redirecionado para a página de login
   E uma mensagem de "Cadastro realizado com sucesso!" deve ser exibida
+```
 
+### Cenário 2: Tentativa de Cadastro com E-mail Já Existente
+
+```gherkin
 Cenário: Tentativa de cadastro com e-mail já existente
   Dado que o e-mail "usuario.existente@teste.com" já está cadastrado
   E eu estou na página de cadastro
@@ -32,9 +44,17 @@ Cenário: Tentativa de cadastro com e-mail já existente
   E clico no botão "Cadastrar"
   Então eu devo continuar na página de cadastro
   E uma mensagem de erro "Este e-mail já está em uso." deve ser exibida
+  ```
 
+### Cenário 3: Tentativa de Cadastro com Campos Obrigatórios em Branco
+```gherkin
 Cenário: Tentativa de cadastro com campos obrigatórios em branco
   Dado que eu estou na página de cadastro
   Quando eu clico no botão "Cadastrar" sem preencher nenhum campo
   Então eu devo continuar na página de cadastro
   E mensagens de erro devem ser exibidas para os campos "nome", "email" e "senha"
+```
+
+### Testes: 
+
+[Testes BDD](https://github.com/jleandromorais/Back-S.O.S/tree/leandro-branch)
